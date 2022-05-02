@@ -1,3 +1,6 @@
+# pangeo-notebook
+# cfgrib
+# ciso
 numpy
 scipy
 matplotlib
@@ -11,3 +14,18 @@ metpy
 xarray
 scikit-learn
 scikit-image
+zarr
+satpy
+seaborn
+adlfs
+argopy
+awscli
+boto3
+bottleneck
+cmip6_preprocessing
+dask-ml
+datashader
+descartes
+earthdata
+eofs
+
