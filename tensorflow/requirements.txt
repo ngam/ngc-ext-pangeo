@@ -1,3 +1,4 @@
+# ------------- list from pangeo-notebook: https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml 
 adlfs
 argopy
 awscli
@@ -6,7 +7,7 @@ bottleneck
 # cartopy
 cfgrib
 # ciso
-# cmip6_preprocessing
+cmip6_preprocessing
 dask-ml
 datashader
 # descartes
@@ -15,17 +16,17 @@ datashader
 # erddapy
 # esmpy
 fastjmd95
-# fsspec
-# gcm_filters
-# gcsfs
+fsspec
+gcm_filters
+gcsfs
 # geocube
 # geopandas
 # geopy
 # geoviews-core
 # gh
 # gh-scoped-creds
-# git-lfs
-# gsw
+git-lfs
+gsw
 h5netcdf
 h5py
 holoviews
@@ -42,12 +43,12 @@ jupyter-panel-proxy
 jupyter-resource-usage
 kerchunk
 lxml
-# lz4
+lz4
 matplotlib
 metpy
 # nb_conda_kernels
 nbstripout
-# nc-time-axis
+nc-time-axis
 netcdf4
 # nomkl
 numcodecs
@@ -71,11 +72,11 @@ gist
 graphviz
 # python=3.8
 rasterio
-# rechunker
-# rio-cogeo
-# rioxarray
-# rise
-# s3fs>0.5
+rechunker
+rio-cogeo
+rioxarray
+rise
+s3fs
 # satpy
 scikit-image
 scikit-learn
@@ -101,3 +102,12 @@ xskillscore
 zarr
 # ----------------- ngam adds:
 pydot
+# ----------------- jax for the curious:
+jax
+jaxlib
+flax
+trax
+distrax
+objax
+rlax
+stax
