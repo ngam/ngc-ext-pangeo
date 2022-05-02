@@ -81,23 +81,23 @@ scikit-image
 scikit-learn
 scipy
 seaborn
-# sparse
-# stackstac
-# tiledb-py
-# timezonefinder
+sparse
+stackstac
+tiledb
+timezonefinder
 xarray
 xarray_leaflet
 xarray-spatial
 xarrayutils
 # xcape
 # xcube>=0.9.1
-# xesmf
+# xesmf ## need esmpy
 xgcm
-# xhistogram
+xhistogram
 xmitgcm
-# xpublish
-# xrft
-# xskillscore
+xpublish
+xrft
+xskillscore
 zarr
 # ----------------- ngam adds:
 pydot
