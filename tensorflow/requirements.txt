@@ -4,27 +4,27 @@ argopy
 awscli
 boto3
 bottleneck
-# cartopy
+# cartopy ## need proj + geos
 cfgrib
-# ciso
+ciso
 cmip6_preprocessing
 dask-ml
 datashader
-# descartes
-# earthdata
-# eofs
-# erddapy
+descartes
+earthdata
+eofs
+erddapy
 # esmpy
 fastjmd95
 fsspec
 gcm_filters
 gcsfs
-# geocube
-# geopandas
-# geopy
+geocube
+geopandas
+geopy
 # geoviews-core
 # gh
-# gh-scoped-creds
+gh-scoped-creds
 git-lfs
 gsw
 h5netcdf
@@ -77,7 +77,7 @@ rio-cogeo
 rioxarray
 rise
 s3fs
-# satpy
+satpy
 scikit-image
 scikit-learn
 scipy
@@ -102,6 +102,7 @@ xskillscore
 zarr
 # ----------------- ngam adds:
 pydot
+cython # to install ciso
 # ----------------- jax for the curious:
 jax
 jaxlib

@@ -8,7 +8,8 @@
 #
 FROM nvcr.io/nvidia/tensorflow:22.04-tf2-py3
 
-# Install tree? git and vim already present
+# Install tree
+# git and vim already present
 RUN apt-get update && apt-get install -y --no-install-recommends \
         tree && \
     rm -rf /var/lib/apt/lists/
