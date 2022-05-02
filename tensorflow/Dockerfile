@@ -14,3 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         my-extra-package-2 \
       && \
     rm -rf /var/lib/apt/lists/
+
+RUN python -m pip insall  --no-cache-dir \
+        netCDF4 cartopy h5netcdf matplotlib metpy \
+        pandas scipy scikit-image scikit-learn xarray
