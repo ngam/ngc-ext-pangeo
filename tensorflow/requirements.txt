@@ -1,0 +1,13 @@
+numpy
+scipy
+matplotlib
+ipython
+jupyterlab
+pandas
+sympy
+nose
+netcdf4
+metpy
+xarray
+scikit-learn
+scikit-image

@@ -10,11 +10,17 @@ FROM nvcr.io/nvidia/tensorflow:22.04-tf2-py3
 
 # Install my-extra-package-1 and my-extra-package-2
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        vim \
-        tree git \
+        vim tree git \
       && \
     rm -rf /var/lib/apt/lists/
 
-RUN python -m pip insall  --no-cache-dir \
-        netCDF4 cartopy h5netcdf matplotlib metpy \
-        pandas scipy scikit-image scikit-learn xarray
+RUN python -m pip \
+	--disable-pip-version-check \
+	--no-cache-dir \
+	install --upgrade pip
+COPY tensorflow/requirements.txt /tmp/pip-tmp/
+RUN python -m pip \
+	--disable-pip-version-check \
+	--no-cache-dir \
+	 install -r /tmp/pip-tmp/requirements.txt \
+	&& rm -rf /tmp/pip-tmp
