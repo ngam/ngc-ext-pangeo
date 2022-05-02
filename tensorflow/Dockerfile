@@ -10,8 +10,8 @@ FROM nvcr.io/nvidia/tensorflow:22.04-tf2-py3
 
 # Install my-extra-package-1 and my-extra-package-2
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        my-extra-package-1 \
-        my-extra-package-2 \
+        vim \
+        tree git \
       && \
     rm -rf /var/lib/apt/lists/
 
