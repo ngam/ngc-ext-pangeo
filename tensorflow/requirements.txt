@@ -28,46 +28,46 @@ fastjmd95
 # gsw
 h5netcdf
 h5py
-# holoviews
-# hvplot
-# intake
-# intake-esm
-# intake-geopandas
-# intake-stac
-# intake-xarray
-# ipyleaflet
-# ipytree
-# ipywidgets
-# jupyter-panel-proxy
-# jupyter-resource-usage
-# kerchunk
-# lxml
+holoviews
+hvplot
+intake
+intake-esm
+intake-geopandas
+intake-stac
+intake-xarray
+ipyleaflet
+ipytree
+ipywidgets
+jupyter-panel-proxy
+jupyter-resource-usage
+kerchunk
+lxml
 # lz4
 matplotlib
 metpy
 # nb_conda_kernels
-# nbstripout
+nbstripout
 # nc-time-axis
 netcdf4
 # nomkl
-# numcodecs
+numcodecs
 numpy
 pandas
-# panel
+panel
 # pangeo-notebook=2022.04.18
-# param!=1.11.0
-# parcels
+param
+parcels
 # pip=20
-# pop-tools
-# prefect
-# pyarrow
-# pycamhd
-# pydap
-# pygeos
-# pystac
-# pystac-client
-# python-blosc
-# python-gist
+pop-tools
+prefect
+pyarrow
+pycamhd
+pydap
+pygeos
+pystac
+pystac-client
+blosc
+gist
 graphviz
 # python=3.8
 rasterio
