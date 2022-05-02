@@ -1,31 +1,101 @@
-# pangeo-notebook
-# cfgrib
-# ciso
-numpy
-scipy
-matplotlib
-ipython
-jupyterlab
-pandas
-sympy
-nose
-netcdf4
-metpy
-xarray
-scikit-learn
-scikit-image
-zarr
-satpy
-seaborn
 adlfs
 argopy
 awscli
 boto3
 bottleneck
-cmip6_preprocessing
+# cartopy
+cfgrib
+# ciso
+# cmip6_preprocessing
 dask-ml
 datashader
-descartes
-earthdata
-eofs
-
+# descartes
+# earthdata
+# eofs
+# erddapy
+# esmpy
+fastjmd95
+# fsspec
+# gcm_filters
+# gcsfs
+# geocube
+# geopandas
+# geopy
+# geoviews-core
+# gh
+# gh-scoped-creds
+# git-lfs
+# gsw
+h5netcdf
+h5py
+# holoviews
+# hvplot
+# intake
+# intake-esm
+# intake-geopandas
+# intake-stac
+# intake-xarray
+# ipyleaflet
+# ipytree
+# ipywidgets
+# jupyter-panel-proxy
+# jupyter-resource-usage
+# kerchunk
+# lxml
+# lz4
+matplotlib
+# metpy
+# nb_conda_kernels
+# nbstripout
+# nc-time-axis
+netcdf4
+# nomkl
+# numcodecs
+numpy
+pandas
+# panel
+# pangeo-notebook=2022.04.18
+# param!=1.11.0
+# parcels
+# pip=20
+# pop-tools
+# prefect
+# pyarrow
+# pycamhd
+# pydap
+# pygeos
+# pystac
+# pystac-client
+# python-blosc
+# python-gist
+graphviz
+# python=3.8
+rasterio
+# rechunker
+# rio-cogeo
+# rioxarray
+# rise
+# s3fs>0.5
+# satpy
+scikit-image
+scikit-learn
+scipy
+seaborn
+# sparse
+# stackstac
+# tiledb-py
+# timezonefinder
+xarray
+xarray_leaflet
+xarray-spatial
+xarrayutils
+# xcape
+# xcube>=0.9.1
+# xesmf
+xgcm
+# xhistogram
+xmitgcm
+# xpublish
+# xrft
+# xskillscore
+zarr

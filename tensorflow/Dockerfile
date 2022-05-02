@@ -8,10 +8,9 @@
 #
 FROM nvcr.io/nvidia/tensorflow:22.04-tf2-py3
 
-# Install my-extra-package-1 and my-extra-package-2
+# Install tree? git and vim already present
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        vim tree git \
-      && \
+        tree && \
     rm -rf /var/lib/apt/lists/
 
 RUN python -m pip \
