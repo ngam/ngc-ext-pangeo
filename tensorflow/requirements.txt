@@ -44,7 +44,7 @@ h5py
 # lxml
 # lz4
 matplotlib
-# metpy
+metpy
 # nb_conda_kernels
 # nbstripout
 # nc-time-axis
@@ -99,3 +99,5 @@ xmitgcm
 # xrft
 # xskillscore
 zarr
+# ----------------- ngam adds:
+pydot
