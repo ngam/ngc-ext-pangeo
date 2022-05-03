@@ -1,0 +1,7 @@
+pytorch-lightning
+torchgeo
+botorch
+pyro-ppl
+dgl
+dglgo
+-f https://data.dgl.ai/wheels/repo.html
