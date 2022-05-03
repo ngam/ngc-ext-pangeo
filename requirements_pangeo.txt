@@ -4,16 +4,10 @@ awscli # messes with pyyaml, etc.
 cartopy # need advanced stuff
 earthdata # causes a scene
 esmpy # not sure...
-geoviews-core
-gh # different method
-gh-scoped-creds # diff method?
-git-lfs
-nb_conda_kernels
-nbstripout
-nomkl
+geoviews-core # need cartopy
+nb_conda_kernels # only conda
+nomkl # no need
 pangeo-notebook=2022.04.18
-pygeos
-timezonefinder
 xcape
 xcube>=0.9.1
 xesmf ## need esmpy

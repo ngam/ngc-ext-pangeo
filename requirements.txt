@@ -128,3 +128,7 @@ gsw
 kerchunk
 lxml
 lz4
+pygeos
+timezonefinder
+nbstripout
+gh-scoped-creds
