@@ -2,6 +2,5 @@ pytorch-lightning
 torchgeo
 botorch
 pyro-ppl
-dgl
-dglgo
+dgl-cu113
 -f https://data.dgl.ai/wheels/repo.html
