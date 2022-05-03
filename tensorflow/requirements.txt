@@ -3,17 +3,12 @@ argopy # messes with scipy installed
 awscli # messes with pyyaml, etc.
 cartopy # need advanced stuff
 earthdata # causes a scene
-esmpy
+esmpy # not sure...
 geoviews-core
 gh # different method
 gh-scoped-creds # diff method?
 git-lfs
 gsw
-intake
-intake-esm
-intake-geopandas
-intake-stac
-intake-xarray
 ipyleaflet
 ipytree
 jupyter-panel-proxy

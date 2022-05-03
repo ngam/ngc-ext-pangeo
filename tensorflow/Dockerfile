@@ -13,41 +13,34 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tree && \
     rm -rf /var/lib/apt/lists/
 
-# first jax ecosystem:
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	pip install "jax[cuda11_cudnn82]" \
-        -f https://storage.googleapis.com/jax-releases/jax_releases.html
+# get jax cuda
+COPY tensorflow/jax_cuda.txt /tmp/pip-tmp/
+RUN python -m pip --disable-pip-version-check --no-cache-dir \
+	    install -r /tmp/pip-tmp/jax_cuda.txt \
+	&& rm -rf /tmp/pip-tmp
 
-# rest of jax:
-COPY tensorflow/jax_reqs.txt /tmp/pip-tmp/
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	 install -r /tmp/pip-tmp/jax_reqs.txt \
+# rest of jax ecosystem
+COPY tensorflow/jax_ecosystem.txt /tmp/pip-tmp/
+RUN python -m pip --disable-pip-version-check --no-cache-dir \
+	    install -r /tmp/pip-tmp/jax_ecosystem.txt \
 	&& rm -rf /tmp/pip-tmp
 
 # pydot and graphviz for viz
-COPY tensorflow/viz_reqs.txt /tmp/pip-tmp/
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	 install -r /tmp/pip-tmp/viz_reqs.txt \
+COPY tensorflow/viz_pkgs.txt /tmp/pip-tmp/
+RUN python -m pip --disable-pip-version-check --no-cache-dir \
+	    install -r /tmp/pip-tmp/viz_pkgs.txt \
 	&& rm -rf /tmp/pip-tmp
 
 # scipy ecosystem
 COPY tensorflow/sci_reqs.txt /tmp/pip-tmp/
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	 install -r /tmp/pip-tmp/sci_reqs.txt \
+RUN python -m pip --disable-pip-version-check --no-cache-dir \
+	    install -r /tmp/pip-tmp/sci_reqs.txt \
 	&& rm -rf /tmp/pip-tmp
 
-# geo ecosystem cont.
-COPY tensorflow/geo_reqs.txt /tmp/pip-tmp/
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	 install -r /tmp/pip-tmp/geo_reqs.txt \
-	&& rm -rf /tmp/pip-tmp
+# # geo ecosystem cont.
+# COPY tensorflow/geo_reqs.txt /tmp/pip-tmp/
+# RUN python -m pip \
+# 	--disable-pip-version-check \
+# 	--no-cache-dir \
+# 	 install -r /tmp/pip-tmp/geo_reqs.txt \
+# 	&& rm -rf /tmp/pip-tmp
