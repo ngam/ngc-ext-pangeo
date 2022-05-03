@@ -9,10 +9,6 @@ gh # different method
 gh-scoped-creds # diff method?
 git-lfs
 gsw
-ipyleaflet
-ipytree
-jupyter-panel-proxy
-jupyter-resource-usage
 kerchunk
 lxml
 lz4
@@ -21,12 +17,6 @@ nbstripout
 nc-time-axis
 nomkl
 pangeo-notebook=2022.04.18
-parcels
-pop-tools
-prefect
-pyarrow
-pycamhd
-pydap
 pygeos
 blosc
 gist
