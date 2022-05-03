@@ -1,4 +1,0 @@
-pydot
-graphviz
-seaborn
-hvplot

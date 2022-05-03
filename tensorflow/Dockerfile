@@ -1,11 +1,3 @@
-#
-# This example Dockerfile illustrates a method to install
-# additional packages on top of NVIDIA's TensorFlow container image.
-#
-# To use this Dockerfile, use the `docker build` command.
-# See https://docs.docker.com/engine/reference/builder/
-# for more information.
-#
 FROM nvcr.io/nvidia/tensorflow:22.04-tf2-py3
 
 # Install tree? git and vim already present
@@ -13,34 +5,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tree && \
     rm -rf /var/lib/apt/lists/
 
-# get jax cuda
-COPY tensorflow/jax_cuda.txt /tmp/pip-tmp/
+# tensorflow+jax ecosystem
+COPY tensorflow/requirements.txt /tmp/pip-tmp/
+
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/jax_cuda.txt \
+	    install jax[cuda11_cudnn82] \
+        -f https://storage.googleapis.com/jax-releases/jax_releases.html
+
+RUN python -m pip --disable-pip-version-check --no-cache-dir \
+	    install -r /tmp/pip-tmp/requirements.txt \
 	&& rm -rf /tmp/pip-tmp
 
-# rest of jax ecosystem
-COPY tensorflow/jax_ecosystem.txt /tmp/pip-tmp/
-RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/jax_ecosystem.txt \
-	&& rm -rf /tmp/pip-tmp
+# common requirements
+COPY requirements.txt /tmp/pip-tmp/
 
-# pydot and graphviz for viz
-COPY tensorflow/viz_pkgs.txt /tmp/pip-tmp/
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/viz_pkgs.txt \
-	&& rm -rf /tmp/pip-tmp
-
-# scipy ecosystem
-COPY tensorflow/sci_reqs.txt /tmp/pip-tmp/
-RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/sci_reqs.txt \
-	&& rm -rf /tmp/pip-tmp
-
-# geo ecosystem cont.
-COPY tensorflow/geo_reqs.txt /tmp/pip-tmp/
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	 install -r /tmp/pip-tmp/geo_reqs.txt \
+	    install -r /tmp/pip-tmp/requirements.txt \
 	&& rm -rf /tmp/pip-tmp

@@ -1,6 +1,0 @@
-nose
-mpmath
-sympy
-imageio
-scikit-image
-scikit-learn>=1.0.0
