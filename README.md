@@ -10,7 +10,7 @@ The basic workflow:
 
     a. For TensorFlow, add jax and other libraries
 
-    b. For PyTorch, add PyTorch-Lightning and other DGL
+    b. For PyTorch, add PyTorch-Lightning and DGL among others
 
 3. Add universal geo-specific deps (from the root of the repo)
 
