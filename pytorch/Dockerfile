@@ -1,8 +1,9 @@
 FROM nvcr.io/nvidia/pytorch:22.04-py3
 
 # Install tree? git and vim already present
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        tree && \
+        tree gh git-lfs && \
     rm -rf /var/lib/apt/lists/
 
 # torch ecosystem
