@@ -104,3 +104,7 @@ intake-esm
 intake-geopandas
 intake-stac
 intake-xarray
+ipyleaflet
+ipytree
+jupyter-panel-proxy
+jupyter-resource-usage
