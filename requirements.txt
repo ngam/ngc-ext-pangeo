@@ -114,3 +114,8 @@ prefect
 pyarrow
 pycamhd
 pydap
+rechunker
+rio-cogeo
+rise
+s3fs
+sparse

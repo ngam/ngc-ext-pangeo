@@ -20,11 +20,6 @@ pangeo-notebook=2022.04.18
 pygeos
 blosc
 gist
-rechunker
-rio-cogeo
-rise
-s3fs
-sparse
 stackstac
 tiledb
 timezonefinder
