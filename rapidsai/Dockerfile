@@ -37,9 +37,9 @@ RUN python -m pip --disable-pip-version-check --no-cache-dir \
 	&& rm -rf /tmp/pip-tmp
 
 # geo ecosystem cont.
-COPY pytorch/geo_reqs.txt /tmp/pip-tmp/
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	 install -r /tmp/pip-tmp/geo_reqs.txt \
-	&& rm -rf /tmp/pip-tmp
+# COPY pytorch/geo_reqs.txt /tmp/pip-tmp/
+# RUN python -m pip \
+# 	--disable-pip-version-check \
+# 	--no-cache-dir \
+# 	 install -r /tmp/pip-tmp/geo_reqs.txt \
+# 	&& rm -rf /tmp/pip-tmp
