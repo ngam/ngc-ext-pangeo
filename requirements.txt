@@ -132,6 +132,3 @@ pygeos
 timezonefinder
 nbstripout
 gh-scoped-creds
-dask<=2022.01.0,>=2021.11.1
-distributed<=2022.01.0,>=2021.11.1
-botocore<1.26.0,>=1.25.5
