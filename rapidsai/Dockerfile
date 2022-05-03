@@ -8,9 +8,9 @@
 #
 FROM nvcr.io/nvidia/rapidsai/rapidsai:22.04-cuda11.4-runtime-ubuntu20.04
 # Install tree? git and vim already present
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        tree && \
-    rm -rf /var/lib/apt/lists/
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#         tree && \
+#     rm -rf /var/lib/apt/lists/
 
 # # get jax cuda
 # COPY rapidsai/jax_cuda.txt /tmp/pip-tmp/
