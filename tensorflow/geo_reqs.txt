@@ -2,6 +2,7 @@ tifffile
 xarray
 cftime
 netcdf4
+cython
 asciitree
 numcodecs
 fasteners
