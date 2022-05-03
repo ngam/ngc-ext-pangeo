@@ -19,11 +19,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # 	    install -r /tmp/pip-tmp/jax_cuda.txt \
 # 	&& rm -rf /tmp/pip-tmp
 
-# # rest of jax ecosystem
-# COPY pytorch/jax_ecosystem.txt /tmp/pip-tmp/
-# RUN python -m pip --disable-pip-version-check --no-cache-dir \
-# 	    install -r /tmp/pip-tmp/jax_ecosystem.txt \
-# 	&& rm -rf /tmp/pip-tmp
+# torch ecosystem
+COPY pytorch/torch_ecosystem.txt /tmp/pip-tmp/
+RUN python -m pip --disable-pip-version-check --no-cache-dir \
+	    install -r /tmp/pip-tmp/torch_ecosystem.txt \
+	&& rm -rf /tmp/pip-tmp
 
 # pydot and graphviz for viz
 COPY pytorch/viz_pkgs.txt /tmp/pip-tmp/
