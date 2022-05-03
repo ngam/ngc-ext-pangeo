@@ -13,13 +13,35 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tree && \
     rm -rf /var/lib/apt/lists/
 
+# first jax ecosystem:
+COPY tensorflow/jax_reqs.txt /tmp/pip-tmp/
 RUN python -m pip \
 	--disable-pip-version-check \
 	--no-cache-dir \
-	install --upgrade pip
-COPY tensorflow/requirements.txt /tmp/pip-tmp/
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	 install -r /tmp/pip-tmp/requirements.txt \
+	 install -r /tmp/pip-tmp/jax_reqs.txt \
 	&& rm -rf /tmp/pip-tmp
+
+# pydot and graphviz for viz
+COPY tensorflow/viz_reqs.txt /tmp/pip-tmp/
+RUN python -m pip \
+	--disable-pip-version-check \
+	--no-cache-dir \
+	 install -r /tmp/pip-tmp/viz_reqs.txt \
+	&& rm -rf /tmp/pip-tmp
+
+# scipy ecosystem
+COPY tensorflow/sci_reqs.txt /tmp/pip-tmp/
+RUN python -m pip \
+	--disable-pip-version-check \
+	--no-cache-dir \
+	 install -r /tmp/pip-tmp/sci_reqs.txt \
+	&& rm -rf /tmp/pip-tmp
+
+# geo ecosystem cont.
+COPY tensorflow/geo_reqs.txt /tmp/pip-tmp/
+RUN python -m pip \
+	--disable-pip-version-check \
+	--no-cache-dir \
+	 install -r /tmp/pip-tmp/geo_reqs.txt \
+	&& rm -rf /tmp/pip-tmp
+

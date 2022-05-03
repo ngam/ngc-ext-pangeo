@@ -1,0 +1,11 @@
+pydot
+graphviz
+seaborn
+param
+pyviz-comms
+pyct
+bokeh
+panel
+colorcet
+holoviews
+hvplot
