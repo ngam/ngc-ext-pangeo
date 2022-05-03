@@ -13,11 +13,12 @@ RUN python -m pip --disable-pip-version-check --no-cache-dir \
         -f https://data.dgl.ai/wheels/repo.html
 
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/torch_ecosystem.txt \
+	    install -r /tmp/pip-tmp/requirements.txt \
 	&& rm -rf /tmp/pip-tmp
 
-# pydot and graphviz for viz
+# common requirements
 COPY requirements.txt /tmp/pip-tmp/
+
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
 	    install -r /tmp/pip-tmp/requirements.txt \
 	&& rm -rf /tmp/pip-tmp
