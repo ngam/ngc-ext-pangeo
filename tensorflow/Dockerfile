@@ -13,34 +13,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tree && \
     rm -rf /var/lib/apt/lists/
 
-# get jax cuda
-COPY tensorflow/jax_cuda.txt /tmp/pip-tmp/
+COPY tensorflow/requirements.txt /tmp/pip-tmp/
+
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/jax_cuda.txt \
+	    install jax[cuda11_cudnn82] \
+        -f https://storage.googleapis.com/jax-releases/jax_releases.html
+
+RUN python -m pip --disable-pip-version-check --no-cache-dir \
+	    install -r /tmp/pip-tmp/requirements.txt \
 	&& rm -rf /tmp/pip-tmp
 
-# rest of jax ecosystem
-COPY tensorflow/jax_ecosystem.txt /tmp/pip-tmp/
-RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/jax_ecosystem.txt \
-	&& rm -rf /tmp/pip-tmp
+COPY requirements.txt /tmp/pip-tmp/
 
-# pydot and graphviz for viz
-COPY tensorflow/viz_pkgs.txt /tmp/pip-tmp/
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/viz_pkgs.txt \
-	&& rm -rf /tmp/pip-tmp
-
-# scipy ecosystem
-COPY tensorflow/sci_reqs.txt /tmp/pip-tmp/
-RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/sci_reqs.txt \
-	&& rm -rf /tmp/pip-tmp
-
-# geo ecosystem cont.
-COPY tensorflow/geo_reqs.txt /tmp/pip-tmp/
-RUN python -m pip \
-	--disable-pip-version-check \
-	--no-cache-dir \
-	 install -r /tmp/pip-tmp/geo_reqs.txt \
+	    install -r /tmp/pip-tmp/requirements.txt \
 	&& rm -rf /tmp/pip-tmp

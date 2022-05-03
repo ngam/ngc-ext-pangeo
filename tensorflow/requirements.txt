@@ -1,43 +1,15 @@
-# ------------- list from pangeo-notebook: https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml 
-argopy # messes with scipy installed
-awscli # messes with pyyaml, etc.
-cartopy # need advanced stuff
-earthdata # causes a scene
-esmpy # not sure...
-geoviews-core
-gh # different method
-gh-scoped-creds # diff method?
-git-lfs
-gsw
-ipyleaflet
-ipytree
-jupyter-panel-proxy
-jupyter-resource-usage
-kerchunk
-lxml
-lz4
-nb_conda_kernels
-nbstripout
-nc-time-axis
-nomkl
-pangeo-notebook=2022.04.18
-parcels
-pop-tools
-prefect
-pyarrow
-pycamhd
-pydap
-pygeos
-blosc
-gist
-rechunker
-rio-cogeo
-rise
-s3fs
-sparse
-stackstac
-tiledb
-timezonefinder
-xcape
-xcube>=0.9.1
-xesmf ## need esmpy
+chex
+distrax
+dm-tree
+flax
+gym
+halo
+objax
+optax
+rlax
+stax
+tensorflow-hub
+tensorflow-probability
+tensorflow-text
+trax
+tensorflow-datasets
