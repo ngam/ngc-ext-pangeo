@@ -6,39 +6,39 @@
 # See https://docs.docker.com/engine/reference/builder/
 # for more information.
 #
-FROM nvcr.io/nvidia/tensorflow:22.04-tf2-py3
+FROM nvcr.io/nvidia/pytorch:22.04-py3
 
 # Install tree? git and vim already present
 RUN apt-get update && apt-get install -y --no-install-recommends \
         tree && \
     rm -rf /var/lib/apt/lists/
 
-# get jax cuda
-COPY tensorflow/jax_cuda.txt /tmp/pip-tmp/
-RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/jax_cuda.txt \
-	&& rm -rf /tmp/pip-tmp
+# # get jax cuda
+# COPY pytorch/jax_cuda.txt /tmp/pip-tmp/
+# RUN python -m pip --disable-pip-version-check --no-cache-dir \
+# 	    install -r /tmp/pip-tmp/jax_cuda.txt \
+# 	&& rm -rf /tmp/pip-tmp
 
-# rest of jax ecosystem
-COPY tensorflow/jax_ecosystem.txt /tmp/pip-tmp/
-RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install -r /tmp/pip-tmp/jax_ecosystem.txt \
-	&& rm -rf /tmp/pip-tmp
+# # rest of jax ecosystem
+# COPY pytorch/jax_ecosystem.txt /tmp/pip-tmp/
+# RUN python -m pip --disable-pip-version-check --no-cache-dir \
+# 	    install -r /tmp/pip-tmp/jax_ecosystem.txt \
+# 	&& rm -rf /tmp/pip-tmp
 
 # pydot and graphviz for viz
-COPY tensorflow/viz_pkgs.txt /tmp/pip-tmp/
+COPY pytorch/viz_pkgs.txt /tmp/pip-tmp/
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
 	    install -r /tmp/pip-tmp/viz_pkgs.txt \
 	&& rm -rf /tmp/pip-tmp
 
 # scipy ecosystem
-COPY tensorflow/sci_reqs.txt /tmp/pip-tmp/
+COPY pytorch/sci_reqs.txt /tmp/pip-tmp/
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
 	    install -r /tmp/pip-tmp/sci_reqs.txt \
 	&& rm -rf /tmp/pip-tmp
 
 # # geo ecosystem cont.
-# COPY tensorflow/geo_reqs.txt /tmp/pip-tmp/
+# COPY pytorch/geo_reqs.txt /tmp/pip-tmp/
 # RUN python -m pip \
 # 	--disable-pip-version-check \
 # 	--no-cache-dir \
