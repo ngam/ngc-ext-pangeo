@@ -25,11 +25,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # 	    install -r /tmp/pip-tmp/jax_ecosystem.txt \
 # 	&& rm -rf /tmp/pip-tmp
 
-# instead of jax, try fastai, lightning, etc. for pytorch:
-RUN python -m pip --disable-pip-version-check --no-cache-dir \
-	    install fastai pytorch-lightning
-  \
-
 # pydot and graphviz for viz
 COPY pytorch/viz_pkgs.txt /tmp/pip-tmp/
 RUN python -m pip --disable-pip-version-check --no-cache-dir \
