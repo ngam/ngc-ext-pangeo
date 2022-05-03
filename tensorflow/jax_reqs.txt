@@ -12,8 +12,6 @@ gitdb
 gym
 gym-notices
 halo
-jax
-jaxlib
 jmespath
 log_symbols
 objax

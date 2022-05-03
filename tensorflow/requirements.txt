@@ -3,19 +3,10 @@ argopy # messes with scipy installed
 awscli # messes with pyyaml, etc.
 cartopy # need advanced stuff
 earthdata # causes a scene
-eofs
-erddapy
 esmpy
-fastjmd95
-fsspec
-gcm_filters
-gcsfs
-geocube
-geopandas
-geopy
 geoviews-core
-gh
-gh-scoped-creds
+gh # different method
+gh-scoped-creds # diff method?
 git-lfs
 gsw
 intake
@@ -42,8 +33,6 @@ pyarrow
 pycamhd
 pydap
 pygeos
-pystac
-pystac-client
 blosc
 gist
 rechunker
@@ -57,9 +46,3 @@ timezonefinder
 xcape
 xcube>=0.9.1
 xesmf ## need esmpy
-xgcm
-xhistogram
-xmitgcm
-xpublish
-xrft
-xskillscore

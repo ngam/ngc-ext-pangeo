@@ -14,6 +14,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/
 
 # first jax ecosystem:
+RUN python -m pip \
+	--disable-pip-version-check \
+	--no-cache-dir \
+	pip install "jax[cuda11_cudnn82]" \
+        -f https://storage.googleapis.com/jax-releases/jax_releases.html
+
+# rest of jax:
 COPY tensorflow/jax_reqs.txt /tmp/pip-tmp/
 RUN python -m pip \
 	--disable-pip-version-check \
@@ -44,4 +51,3 @@ RUN python -m pip \
 	--no-cache-dir \
 	 install -r /tmp/pip-tmp/geo_reqs.txt \
 	&& rm -rf /tmp/pip-tmp
-
