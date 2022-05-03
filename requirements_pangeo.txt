@@ -8,20 +8,11 @@ geoviews-core
 gh # different method
 gh-scoped-creds # diff method?
 git-lfs
-gsw
-kerchunk
-lxml
-lz4
 nb_conda_kernels
 nbstripout
-nc-time-axis
 nomkl
 pangeo-notebook=2022.04.18
 pygeos
-blosc
-gist
-stackstac
-tiledb
 timezonefinder
 xcape
 xcube>=0.9.1

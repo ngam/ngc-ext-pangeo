@@ -119,3 +119,12 @@ rio-cogeo
 rise
 s3fs
 sparse
+blosc
+gist
+stackstac
+tiledb
+nc-time-axis
+gsw
+kerchunk
+lxml
+lz4
