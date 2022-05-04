@@ -18,7 +18,7 @@ index fb3122b..840b04f 100755
 -
 -if [[ "$TF_CUDA_COMPUTE_CAPABILITIES" == "all" ]]; then
 +if [[ "$TF_CUDA_COMPUTE_CAPABILITIES" == "custom" ]]; then
-+  TF_CUDA_COMPUTE_CAPABILITIES="7.0,7.5,8.0,8.6"
++  TF_CUDA_COMPUTE_CAPABILITIES="7.0,8.0"
 +elif [[ "$TF_CUDA_COMPUTE_CAPABILITIES" == "all" ]]; then
    TF_CUDA_COMPUTE_CAPABILITIES="$(${THIS_DIR}/nvarch.sh ${TARGETARCH})"
    if [[ $? -ne 0 ]]; then exit 1; fi
