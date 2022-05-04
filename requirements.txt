@@ -137,5 +137,5 @@ awscli # messes with pyyaml, etc.
 earthdata # causes a scene
 tornado
 gdal
-git+https://github.com/xgcm/xcape@releases/tag/v0.1.4
-git+https://github.com/dcs4cop/xcube/@releases/tag/v0.11.1
+git+https://github.com/xgcm/xcape/tree/v0.1.4
+git+https://github.com/dcs4cop/xcube/tree/v0.11.1
