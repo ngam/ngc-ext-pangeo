@@ -136,6 +136,6 @@ argopy # messes with scipy installed
 awscli # messes with pyyaml, etc.
 earthdata # causes a scene
 tornado
-gdal
+# gdal
 git+https://github.com/xgcm/xcape
 git+https://github.com/dcs4cop/xcube
