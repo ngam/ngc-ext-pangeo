@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Install GEOS:
 RUN wget -O /tmp/geos-3.10.2.tar.bz2 http://download.osgeo.org/geos/geos-3.10.2.tar.bz2 \
-	&& tar xvfj /tmp/geos-3.10.2.tar.bz2 --directory=/tmp/geos-3.10.2 \
+	&& tar xvfj /tmp/geos-3.10.2.tar.bz2 --directory=/tmp/ \
 	&& cd /tmp/geos-3.10.2 \
 	&& mkdir _build \
 	&& cd _build \
