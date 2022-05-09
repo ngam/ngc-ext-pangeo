@@ -6,3 +6,4 @@ pangeo-notebook=2022.04.18
 xcape
 xcube>=0.9.1
 xesmf ## need esmpy
+earthdata
