@@ -19,6 +19,16 @@ RUN wget -O /tmp/geos-3.10.2.tar.bz2 http://download.osgeo.org/geos/geos-3.10.2.
 	&& ctest \
 	&& make install
 
+# install PROJ
+RUN wget -O /tmp/proj-8.2.1.tar.gz https://download.osgeo.org/proj/proj-8.2.1.tar.gz \
+	&& tar xvfj /tmp/proj-8.2.1.tar.gz --directory=/tmp/ \
+	&& cd /tmp/proj-8.2.1 \
+	&& mkdir _build \
+	&& cd _build \
+	&& cmake .. \
+	&& cmake --build . \
+	&& cmake --build . --target install 
+
 # tensorflow+jax ecosystem
 COPY tensorflow/requirements.txt /tmp/pip-tmp/
 
