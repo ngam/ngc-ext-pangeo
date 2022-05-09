@@ -1,5 +1,3 @@
-argopy
-awscli
 cartopy
 geoviews
 pydot

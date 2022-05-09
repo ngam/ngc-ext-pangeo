@@ -7,3 +7,5 @@ xcape
 xcube>=0.9.1
 xesmf ## need esmpy
 earthdata
+argopy
+awscli
