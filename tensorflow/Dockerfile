@@ -8,6 +8,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tree gh git-lfs && \
     rm -rf /var/lib/apt/lists/
 
+# Install GEOS:
+RUN wget -O /tmp/geos-3.10.2.tar.bz2 http://download.osgeo.org/geos/geos-3.10.2.tar.bz2 \
+	&& tar xvfj /tmp/geos-3.10.2.tar.bz2 \
+	&& cd /tmp/geos-3.10.2 \
+	&& mkdir _build \
+	&& cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local .. \
+	&& make \
+	&& ctest \
+	&& make install
+
 # tensorflow+jax ecosystem
 COPY tensorflow/requirements.txt /tmp/pip-tmp/
 
