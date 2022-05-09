@@ -8,6 +8,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tree gh git-lfs && \
     rm -rf /var/lib/apt/lists/
 
+# install PROJ
+RUN wget -O /tmp/proj-8.2.1.tar.gz https://download.osgeo.org/proj/proj-8.2.1.tar.gz \
+	&& tar xvfj /tmp/proj-8.2.1.tar.gz --directory=/tmp/proj-8.2.1 \
+	&& cd /tmp/proj-8.2.1 \
+	&& mkdir _build \
+	&& cd _build \
+	&& cmake .. \
+	&& cmake --build . \
+	&& cmake --build . --target install 
+
 # torch ecosystem
 COPY pytorch/requirements.txt /tmp/pip-tmp/
 
