@@ -1,10 +1,8 @@
 # ------------- list from pangeo-notebook: https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml 
 argopy # messes with scipy installed
 awscli # messes with pyyaml, etc.
-cartopy # need advanced stuff
 earthdata # causes a scene
 esmpy # not sure...
-geoviews-core # need cartopy
 nb_conda_kernels # only conda
 nomkl # no need
 pangeo-notebook=2022.04.18
