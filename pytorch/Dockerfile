@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         tree gh git-lfs sqlite3 libsqlite3-dev libtiff-dev && \
     rm -rf /var/lib/apt/lists/
 
+
 # install geos
 RUN wget -O /tmp/geos-3.10.2.tar.bz2 http://download.osgeo.org/geos/geos-3.10.2.tar.bz2 \
 	&& tar xvfj /tmp/geos-3.10.2.tar.bz2 --directory=/tmp/ \
