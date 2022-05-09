@@ -1,3 +1,6 @@
+argopy
+awscli
+earthdata
 cartopy
 geoviews
 pydot
