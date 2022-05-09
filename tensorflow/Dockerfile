@@ -9,15 +9,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/
 
 # Install GEOS:
-#RUN wget -O /tmp/geos-3.10.2.tar.bz2 http://download.osgeo.org/geos/geos-3.10.2.tar.bz2 \
-#	&& tar xvfj /tmp/geos-3.10.2.tar.bz2 --directory=/tmp/ \
-#	&& cd /tmp/geos-3.10.2 \
-#	&& mkdir _build \
-#	&& cd _build \
-#	&& cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local .. \
-#	&& make \
-#	&& ctest \
-#	&& make install
+RUN wget -O /tmp/geos-3.10.2.tar.bz2 http://download.osgeo.org/geos/geos-3.10.2.tar.bz2 \
+	&& tar xvfj /tmp/geos-3.10.2.tar.bz2 --directory=/tmp/ \
+	&& cd /tmp/geos-3.10.2 \
+	&& mkdir _build \
+	&& cd _build \
+	&& cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local .. \
+	&& make \
+	&& ctest \
+	&& make install
 
 # install PROJ
 RUN wget -O /tmp/proj-8.2.1.tar.gz https://download.osgeo.org/proj/proj-8.2.1.tar.gz \
