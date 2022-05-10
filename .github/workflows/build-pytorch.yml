@@ -1,10 +1,10 @@
 name: pytorch
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
+    paths:
+      - 'pytorch/*'
 
 jobs:
 

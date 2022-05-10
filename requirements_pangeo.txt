@@ -1,7 +1,4 @@
 # ------------- list from pangeo-notebook: https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml 
-argopy # messes with scipy installed
-awscli # messes with pyyaml, etc.
-earthdata # causes a scene
 esmpy # not sure...
 nb_conda_kernels # only conda
 nomkl # no need
@@ -9,3 +6,6 @@ pangeo-notebook=2022.04.18
 xcape
 xcube>=0.9.1
 xesmf ## need esmpy
+earthdata
+argopy
+awscli
