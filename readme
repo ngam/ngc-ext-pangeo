@@ -16,4 +16,8 @@ The basic workflow:
 
 ---
 
-Handling complex dependencies: (TBD)
+Handling complex dependencies: GEOS + PROJ are built from source.
+
+---
+
+Missing packages: https://github.com/ngam/ngc-ext-pangeo/issues/21
